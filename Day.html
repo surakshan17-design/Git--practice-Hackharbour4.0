@@ -1,0 +1,79 @@
+
+<html>
+<head>
+    <title>PG Complaint Management</title>
+    <style>
+        body {
+    font-family: Arial;
+    background: #f2f2f2;
+    padding: 20px;
+}
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    box-sizing: border-box;
+}
+
+button {
+    background: #333;
+    color: white;
+    border: none;
+}
+.complaint {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin-top: 10px;
+}
+#message {
+    color: green;
+}
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>PG Complaint Management</h2>
+    <form id="complaintForm">
+        <input id="name" placeholder="Resident Name" required>
+        <input id="room" placeholder="Room / Flat Number" required>
+        <input id="contact" placeholder="Contact Number" required>
+        <select id="category" required>
+            <option value="">Select Category</option>
+            <option>Electricity</option>
+            <option>Plumbing</option>
+            <option>Water</option>
+            <option>Internet</option>
+            <option>Housekeeping</option>
+            <option>Maintenance</option>
+        </select>
+        <textarea id="description"
+            placeholder="Describe the problem" required></textarea>
+        <select id="priority">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+        </select>
+        <button type="submit">Submit Complaint</button>
+    </form>
+    <p id="message"></p>
+    <input id="search"
+        placeholder="Search name, room or category">
+    <select id="statusFilter">
+        <option>All</option>
+        <option>Pending</option>
+        <option>In Progress</option>
+        <option>Resolved</option>
+    </select>
+    <div id="complaintList"></div>
+</div>
+<script src="Day.js"></script>
+</body>
+</html>
